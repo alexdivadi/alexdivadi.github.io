@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import styled from 'styled-components';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
+import ProjectDetail from './pages/ProjectDetail';
 
-function App() {
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
+
+const MainContent = styled.main`
+  flex: 1;  // This will make the main content fill the available space
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;  // Center text if needed
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Container>
+        <Navbar />
+        <MainContent>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/project/:id" element={<ProjectDetail />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </MainContent>
+        <Footer />
+      </Container>
+    </Router>
   );
-}
+};
 
 export default App;
