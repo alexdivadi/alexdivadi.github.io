@@ -42,15 +42,15 @@ const Description = styled.p`
 `;
 
 const ProjectCard = ({ project }) => {
-    return (
-        <Card to={`/project/${project.id}`}>
-            <Image src={project.image} alt={project.title} />
-            <Content>
-                <Title>{project.title}</Title>
-                <Description>{project.excerpt}</Description>
-            </Content>
-        </Card>
-    );
+  return (
+    <Card to={project.description ? `/project/${project.id}` : project.link}>
+      <Image src={project.image} alt={project.title} />
+      <Content>
+        <Title>{project.title}</Title>
+        <Description>{project.excerpt}</Description>
+      </Content>
+    </Card>
+  );
 };
 
 export default ProjectCard;

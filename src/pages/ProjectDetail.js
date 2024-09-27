@@ -2,7 +2,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { Container, Description, Title } from '../StyledComponents';
+import { LinkButton, Container, Description, Title } from '../StyledComponents';
 import projects from '../Projects';
 
 
@@ -38,9 +38,9 @@ const ProjectDetail = () => {
                 {project.description}
             </Content>
             <Description>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <LinkButton href={project.link} target="_blank" rel="noopener noreferrer">
                     View Project
-                </a>
+                </LinkButton>
             </Description>
         </Container>
     );

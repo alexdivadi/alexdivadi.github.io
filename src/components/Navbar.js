@@ -8,7 +8,7 @@ const Nav = styled.nav`
   justify-content: space-around;
   align-items: center; 
   padding: 1rem 2rem; 
-  background-color: #333;
+  background-color: #13070C;
   color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
@@ -36,13 +36,13 @@ const NavLink = styled(Link)`
 `;
 
 const Navbar = () => {
-    return (
-        <Nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/projects">Projects</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-        </Nav>
-    );
+  return (
+    <Nav>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/projects">Projects</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
+    </Nav>
+  );
 };
 
 export default Navbar;

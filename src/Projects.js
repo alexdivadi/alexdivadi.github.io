@@ -1,5 +1,7 @@
 import project1 from './assets/images/project1.png';
 import project2 from './assets/images/project2.png';
+import project3 from './assets/images/project3.png';
+import { LinkButton } from './StyledComponents';
 
 const projects = [
     {
@@ -31,7 +33,9 @@ const projects = [
 
             <p style={{ 'textAlign': 'center' }}>
                 You can install the app from the <a
-                    href='https://play.google.com/store/apps/details?id=com.blacktaxandwhitebenefits.gfapp&hl=en&pli=1'>
+                    href='https://play.google.com/store/apps/details?id=com.blacktaxandwhitebenefits.gfapp&hl=en&pli=1'
+                    target='_blank'
+                    rel="noreferrer">
                     Google Play Store
                 </a>
             </p>
@@ -47,10 +51,12 @@ const projects = [
             <li><strong>AI-Powered Face Detection</strong>: Automatically identifies faces in uploaded photos for easy processing.</li>
             <li><strong>Selective Blurring</strong>: Choose which faces to blur or leave unblurred, giving you complete control over your images.</li>
             <li><strong>Fast Processing</strong>: Receive your blurred photo in seconds, making it quick and convenient to share safely.</li>
-        </ul><p style={{ 'textAlign': 'center' }}><a
-            href='https://faceblur-ai.vercel.app/'>
+        </ul><p style={{ 'textAlign': 'center' }}><LinkButton
+            href='https://faceblur-ai.vercel.app/'
+            target='_blank'
+            rel="noreferrer">
             Check it out
-        </a></p>
+        </LinkButton></p>
             <h3>Technologies Used</h3><h4>Backend:</h4><ul>
                 <li>Flask</li>
                 <li>YuNet</li>
@@ -65,6 +71,15 @@ const projects = [
         ,
         link: 'https://github.com/alexdivadi/faceblur',
         image: project2,
+    },
+    {
+        id: 3,
+        title: 'JourneyHub',
+        excerpt: 'A Flutter app to connect those in need with local resources',
+        description: null,
+        link: 'https://ministry-demos.web.app/',
+        image: project3,
+
     },
 ];
 
