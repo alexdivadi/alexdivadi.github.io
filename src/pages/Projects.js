@@ -16,7 +16,7 @@ const ProjectList = styled.div`
 const Projects = () => {
   return (
     <Container>
-      <div style={{ 'padding': '2rem' }}>
+      <div style={{ padding: '2rem', marginBottom: '20px' }}>
         <Title>My Projects</Title>
         <ProjectList>
           {projects.map((project, index) => (

@@ -17,7 +17,7 @@ const Content = styled.p`
   font-size: 1.2rem;
   color: #666; // Softer color for description
   margin: 0 auto 2rem auto;
-  max-width: 666px;
+  max-width: 777px;
   align-items: center; 
   text-align: justify;
 `;
@@ -32,16 +32,18 @@ const ProjectDetail = () => {
 
     return (
         <Container>
-            <Title>{project.title}</Title>
-            <Image src={project.image} alt={project.title} />
-            <Content>
-                {project.description}
-            </Content>
-            <Description>
-                <LinkButton href={project.link} target="_blank" rel="noopener noreferrer">
-                    View Project
-                </LinkButton>
-            </Description>
+            <div style={{ margin: '12px', marginBottom: '20px', padding: '24px', backgroundColor: 'white' }}>
+                <Title>{project.title}</Title>
+                <Image src={project.image} alt={project.title} />
+                <Content>
+                    {project.description}
+                </Content>
+                <Description>
+                    <LinkButton href={project.link} target="_blank" rel="noopener noreferrer">
+                        View GitHub
+                    </LinkButton>
+                </Description>
+            </div>
         </Container>
     );
 };

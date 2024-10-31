@@ -11,7 +11,7 @@ const Image = styled.img`
   object-fit: cover; // Maintains aspect ratio
 `;
 
-const Contact = () => {
+const About = () => {
     return (
         <Container>
             <Image src={profileImage} alt='' />
@@ -24,4 +24,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default About;
